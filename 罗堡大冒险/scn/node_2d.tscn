@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuepoqedpoya6"]
+
+[ext_resource type="PackedScene" uid="uid://k8bwswcj05j6" path="res://scn/player_j_jh.tscn" id="1_nappb"]
+[ext_resource type="PackedScene" uid="uid://becy5ecae5ekk" path="res://scn/monster_slime.tscn" id="2_h45fr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.82, 3.82)
+
+[node name="Player_JJh" parent="." instance=ExtResource("1_nappb")]
+position = Vector2(-1, 84)
+
+[node name="Monster_Slime" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("2_h45fr")]
+position = Vector2(-153, 87)
+endPoint = NodePath("Marker2D_Slime")
+
+[node name="Marker2D_Slime" type="Marker2D" parent="Monster_Slime"]
+position = Vector2(187, -132)
+rotation = 0.000766951
+
+[node name="Monster_Slime2" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("2_h45fr")]
+position = Vector2(158, 7)
+endPoint = NodePath("Marker2D_Slime")
+
+[node name="Marker2D_Slime" type="Marker2D" parent="Monster_Slime2"]
+position = Vector2(67, 107)
+rotation = 0.000766951
+
+[node name="Monster_Slime3" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("2_h45fr")]
+position = Vector2(-2, -12)
+endPoint = NodePath("Marker2D_Slime")
+
+[node name="Marker2D_Slime" type="Marker2D" parent="Monster_Slime3"]
+position = Vector2(-166, -90)
+rotation = 0.000766951
